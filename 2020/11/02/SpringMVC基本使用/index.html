@@ -16,7 +16,7 @@
 <meta property="og:description" content="摘要：SpringMVC基本配置与使用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-02T13:22:54.000Z">
-<meta property="article:modified_time" content="2020-11-02T15:47:41.879Z">
+<meta property="article:modified_time" content="2020-11-02T16:04:15.317Z">
 <meta property="article:author" content="陈乾">
 <meta property="article:tag" content="SSM">
 <meta name="twitter:card" content="summary">
@@ -198,7 +198,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">   &lt;title&gt;SpringMVC&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">$&#123;msg&#125;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 <p>配置Tomcat ，  开启服务器 ， 访问 对应的请求路径！</p>
-<h2 id="2-RequestMapping"><a href="#2-RequestMapping" class="headerlink" title="2.  @RequestMapping"></a>2.  @RequestMapping</h2><p><strong>@RequestMapping</strong></p>
+<h1 id="2-RequestMapping"><a href="#2-RequestMapping" class="headerlink" title="2.  @RequestMapping"></a>2.  @RequestMapping</h1><p><strong>@RequestMapping</strong></p>
 <ul>
 <li><p>@RequestMapping注解用于映射url到控制器类或一个特定的处理程序方法。可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。</p>
 </li>
@@ -328,12 +328,8 @@
 <h3 id="3-5-3-ServletAPI"><a href="#3-5-3-ServletAPI" class="headerlink" title="3.5.3  ServletAPI"></a>3.5.3  ServletAPI</h3><p>​    通过设置ServletAPI , 不需要视图解析器 .</p>
 <p>1、通过HttpServletResponse进行输出</p>
 <p>2、通过HttpServletResponse实现重定向</p>
-<p>3、通过HttpServletResponse实现转发  </p>
+<p>3、通过HttpServletRequest实现转发  </p>
 <p>同时， 方法参数写ServletAPI 可以通过ServletAPI传参。。。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
 
       
 
@@ -467,7 +463,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-引入SpringMVC"><span class="toc-number">1.</span> <span class="toc-text">1. 引入SpringMVC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-配置web-xml-注册DispatcherServlet"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 配置web.xml  注册DispatcherServlet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-添加视图解析器"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 添加视图解析器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-创建controller的bean-使用-Controller"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 创建controller的bean,使用@Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-编写一个controller"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 编写一个controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-视图demo"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 视图demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-RequestMapping"><span class="toc-number">1.6.</span> <span class="toc-text">2.  @RequestMapping</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-数据处理以及跳转"><span class="toc-number">2.</span> <span class="toc-text">3 . 数据处理以及跳转</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-处理提交数据"><span class="toc-number">2.1.</span> <span class="toc-text">3.1 处理提交数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-PathVariable注解"><span class="toc-number">2.2.</span> <span class="toc-text">3.2 @PathVariable注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-数据显示到前端"><span class="toc-number">2.3.</span> <span class="toc-text">3.3 数据显示到前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-处理中文乱码问题"><span class="toc-number">2.4.</span> <span class="toc-text">3.4 处理中文乱码问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-页面跳转问题"><span class="toc-number">2.5.</span> <span class="toc-text">3.5 页面跳转问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-1-服务器内部跳转"><span class="toc-number">2.5.1.</span> <span class="toc-text">3.5.1 服务器内部跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-2-客户端跳转（重定向）"><span class="toc-number">2.5.2.</span> <span class="toc-text">3.5.2 客户端跳转（重定向）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-3-ServletAPI"><span class="toc-number">2.5.3.</span> <span class="toc-text">3.5.3  ServletAPI</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-引入SpringMVC"><span class="toc-number">1.</span> <span class="toc-text">1. 引入SpringMVC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-配置web-xml-注册DispatcherServlet"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 配置web.xml  注册DispatcherServlet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-添加视图解析器"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 添加视图解析器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-创建controller的bean-使用-Controller"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 创建controller的bean,使用@Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-编写一个controller"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 编写一个controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-视图demo"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 视图demo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-RequestMapping"><span class="toc-number">2.</span> <span class="toc-text">2.  @RequestMapping</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-数据处理以及跳转"><span class="toc-number">3.</span> <span class="toc-text">3 . 数据处理以及跳转</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-处理提交数据"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 处理提交数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-PathVariable注解"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 @PathVariable注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-数据显示到前端"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 数据显示到前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-处理中文乱码问题"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 处理中文乱码问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-页面跳转问题"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 页面跳转问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-1-服务器内部跳转"><span class="toc-number">3.5.1.</span> <span class="toc-text">3.5.1 服务器内部跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-2-客户端跳转（重定向）"><span class="toc-number">3.5.2.</span> <span class="toc-text">3.5.2 客户端跳转（重定向）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-3-ServletAPI"><span class="toc-number">3.5.3.</span> <span class="toc-text">3.5.3  ServletAPI</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -584,11 +580,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java Web</a>
+                <a href="javascript:void(0)" class="js-tag color2">JavaSE</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JavaSE</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java Web</a>
               </li>
              
               <li class="article-tag-list-item">
